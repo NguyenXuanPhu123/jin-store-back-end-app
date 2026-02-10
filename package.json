@@ -3,21 +3,35 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:dev": "nodemon src/index.js",
+    "migrate:dev": "prisma migrate dev"
+  },
+  "prisma": {
+    "seed": "node prisma/seeds/product.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
+  "type": "module",
   "dependencies": {
+    "@prisma/client": "^5.10.0",
     "axios": "^1.13.2",
+    "bcrypt": "^6.0.0",
     "cors": "^2.8.5",
+    "crypto": "^1.0.1",
     "dotenv": "^17.2.3",
     "express": "^5.2.1",
     "helmet": "^8.1.0",
-    "morgan": "^1.10.1"
+    "jsonwebtoken": "^9.0.3",
+    "morgan": "^1.10.1",
+    "nodemailer": "^8.0.0"
   },
   "devDependencies": {
-    "nodemon": "^3.1.11"
-  }
+    "@types/node": "^25.2.1",
+    "nodemon": "^3.1.11",
+    "prisma": "^5.10.0"
+  },
+  "packageManager": "yarn@4.3.1+sha512.af78262d7d125afbfeed740602ace8c5e4405cd7f4735c08feb327286b2fdb2390fbca01589bfd1f50b1240548b74806767f5a063c94b67e431aabd0d86f7774"
 }
